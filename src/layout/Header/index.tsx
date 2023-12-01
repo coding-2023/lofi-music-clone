@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -31,27 +32,43 @@ const Header = () => {
   };
 
   return (
-    <nav className="wrap">
-      <div className="logo-image">
-        <Link to="/">
-          <img src="/assets/icons/lofi-logo.gif" alt="" />
-        </Link>
-      </div>
-      <div className="nav-menu"></div>
-      <div className="nav-menu">
-        {/* <a target='_blank' rel='noreferrer' href={CONSTANTS.AUTHOR_GITHUB_LINK}>
+    <div className="div-container">
+      <nav className="wrap">
+        <div className="logo-image">
+          <Link to="/">
+            <img src="/assets/icons/lofi-logo.gif" alt="" />
+          </Link>
+        </div>
+        <div className="nav-menu"></div>
+        <div className="nav-menu">
+          {/* <a target='_blank' rel='noreferrer' href={CONSTANTS.AUTHOR_GITHUB_LINK}>
           <i className='fab fa-github'></i>
           <span>GitHub</span>
         </a> */}
-        <div onClick={daynightHandler} className="switch-btn">
-          <DarkLightSwitch theme={mode} />
-        </div>
 
-        <button onClick={fullscreenHandler} className="fullscreen-btn">
-          <i className="fas fa-expand fa-lg"></i>
-        </button>
-      </div>
-    </nav>
+          <div onClick={daynightHandler} className="switch-btn">
+            <DarkLightSwitch theme={mode} />
+          </div>
+
+          <button onClick={fullscreenHandler} className="fullscreen-btn">
+            <i className="fas fa-expand fa-lg"></i>
+          </button>
+        </div>
+      </nav>
+      <TextField
+        placeholder="Url:"
+        color="primary"
+        variant="outlined"
+        size="small"
+        sx={{
+          width: "350px",
+          mr: "30px",
+          bgcolor: "#ffffff",
+          borderRadius: "8px",
+          "& fieldset": { border: "none" },
+        }}
+      />
+    </div>
   );
 };
 

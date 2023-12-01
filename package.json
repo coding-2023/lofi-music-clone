@@ -28,7 +28,8 @@
     "redux-devtools-extension": "^2.13.9",
     "sass": "^1.46.0",
     "typescript": "^5.1.6",
-    "web-vitals": "^3.3.2"
+    "web-vitals": "^3.3.2",
+    "ytdl-core": "^4.11.5"
   },
   "scripts": {
     "start": "set PORT=3005 && react-scripts start",
