@@ -4,12 +4,13 @@
   width: 100%;
   z-index: 10;
   display: flex;
-  height: 15%;
+  height: 10%;
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
   padding: 0 26px;
   width: 100%;
+  flex-wrap: wrap;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -34,7 +35,7 @@
     color: white;
     font-size: 13px;
     font-style: italic;
-    
+
     .author-name {
       margin-left: 5px;
       color: white;
@@ -45,8 +46,8 @@
         opacity: 0.8;
       }
     }
-    @media (max-width: 1024px) {
-      display: none;
-    }
+    // @media (max-width: 1024px) {
+    //   display: none;
+    // }
   }
 }

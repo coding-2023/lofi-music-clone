@@ -1,11 +1,11 @@
-import{ useState } from "react";
+import { useState } from "react";
 
-import "./styles.scss";
 import ModifierBoard from "../../components/ModifierBoard";
 import RainToggleButton from "../../components/RainToggleButton";
+import "./styles.scss";
 
-import Footer from "../../layout/Footer";
 import { useTimer } from "react-timer-hook";
+import Footer from "../../layout/Footer";
 import { RootState, useAppSelector } from "../../store/store";
 const Home = () => {
   const [timerStart, setTimerStart] = useState(false);
@@ -45,7 +45,7 @@ const Home = () => {
         loop
         muted
       >
-        <source src='/assets/video/Night-clear.mp4' type='video/mp4' />
+        <source src="/assets/video/Night-clear.mp4" type="video/mp4" />
       </video>
       <video
         className={combineMode === "night-rain" ? "videoIn" : "videoOut"}
@@ -53,7 +53,7 @@ const Home = () => {
         loop
         muted
       >
-        <source src='/assets/video/Night-rainny.mp4' type='video/mp4' />
+        <source src="/assets/video/Night-rainny.mp4" type="video/mp4" />
       </video>
       {/* Day */}
       <video
@@ -62,7 +62,7 @@ const Home = () => {
         loop
         muted
       >
-        <source src='/assets/video/Day-sunny.mp4' type='video/mp4' />
+        <source src="/assets/video/Day-sunny.mp4" type="video/mp4" />
       </video>
       <video
         className={combineMode === "day-rain" ? "videoIn" : "videoOut"}
@@ -70,7 +70,7 @@ const Home = () => {
         loop
         muted
       >
-        <source src='/assets/video/Day-rainny.mp4' type='video/mp4' />
+        <source src="/assets/video/Day-rainny.mp4" type="video/mp4" />
       </video>
       <RainToggleButton />
       <ModifierBoard

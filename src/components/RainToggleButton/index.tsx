@@ -1,9 +1,9 @@
-import{ useState } from "react";
-import { changeRainStatus } from "../../store/slice/rainSlice";
+import { useState } from "react";
 import ReactAudioPlayer from "react-audio-player";
+import { changeRainStatus } from "../../store/slice/rainSlice";
 
-import "./styles.scss";
 import { RootState, useAppDispatch, useAppSelector } from "../../store/store";
+import "./styles.scss";
 
 const RainToggleButton = () => {
   const dispatch = useAppDispatch();
@@ -20,24 +20,24 @@ const RainToggleButton = () => {
   };
 
   return (
-    <div className='wrapper'>
+    <div className="wrapper">
       {buttonClick && (
         <ReactAudioPlayer
-          preload='auto'
+          preload="auto"
           autoPlay
-          src='./assets/musics/rain_city.mp3'
+          src="./assets/musics/rain_city.mp3"
           loop
           volume={rainValue / 100}
         />
       )}
       <div
-        className='button'
+        className="button"
         onClick={rainButtonHandler}
         // onMouseOver={}
         // onMouseOut={MouseOut}
       >
-        <div className='icon'>
-          <i className='fas fa-cloud-rain'></i>
+        <div className="icon">
+          <i className="fas fa-cloud-rain"></i>
         </div>
       </div>
     </div>

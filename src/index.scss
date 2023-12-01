@@ -1,5 +1,5 @@
 body {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   /* // Disable Text Selection */
   user-select: none;
@@ -14,6 +14,7 @@ body,
 html {
   background-color: black;
   box-sizing: border-box;
+
 }
 
 div,

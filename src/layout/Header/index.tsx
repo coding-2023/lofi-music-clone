@@ -1,11 +1,10 @@
-import  { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { changeDayNight } from "../../store/slice/modeSlice";
-import "./styles.scss";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import DarkLightSwitch from "../../components/DarkLightSwitch";
-import { CONSTANTS } from "../../constants/constants";
+import { changeDayNight } from "../../store/slice/modeSlice";
 import { RootState } from "../../store/store";
+import "./styles.scss";
 
 export interface IDarkLightSwitchProps {
   theme: string;
@@ -32,22 +31,24 @@ const Header = () => {
   };
 
   return (
-    <nav className='wrap'>
-      <Link to='/'>
-        <img src='/assets/icons/lofi-logo.gif' alt='' />
-      </Link>
-      <div className='nav-menu'></div>
-      <div className='nav-menu'>
-        <a target='_blank' rel='noreferrer' href={CONSTANTS.AUTHOR_GITHUB_LINK}>
+    <nav className="wrap">
+      <div className="logo-image">
+        <Link to="/">
+          <img src="/assets/icons/lofi-logo.gif" alt="" />
+        </Link>
+      </div>
+      <div className="nav-menu"></div>
+      <div className="nav-menu">
+        {/* <a target='_blank' rel='noreferrer' href={CONSTANTS.AUTHOR_GITHUB_LINK}>
           <i className='fab fa-github'></i>
           <span>GitHub</span>
-        </a>
-        <div onClick={daynightHandler}>
+        </a> */}
+        <div onClick={daynightHandler} className="switch-btn">
           <DarkLightSwitch theme={mode} />
         </div>
 
-        <button onClick={fullscreenHandler} className='fullscreen-btn'>
-          <i className='fas fa-expand fa-lg'></i>
+        <button onClick={fullscreenHandler} className="fullscreen-btn">
+          <i className="fas fa-expand fa-lg"></i>
         </button>
       </div>
     </nav>

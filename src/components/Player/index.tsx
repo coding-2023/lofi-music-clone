@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from "react";
-import "./styles.scss";
+import { useEffect, useRef, useState } from "react";
 import { RootState, useAppSelector } from "../../store/store";
+import "./styles.scss";
 
 export interface IPlayerProps {
   currentSongIndex: number;
@@ -55,21 +55,21 @@ const Player = ({
     }
   };
   return (
-    <div className='music-player'>
+    <div className="music-player">
       <audio loop src={songs[currentSongIndex].src} ref={audioElement}></audio>
-      <div className='music-player--controls'>
-        <button className='skip-btn' onClick={() => SkipSong(false)}>
-          <img src='/assets/icons/prev.svg' alt='' />
+      <div className="music-player--controls">
+        <button className="skip-btn" onClick={() => SkipSong(false)}>
+          <img src="/assets/icons/prev.svg" alt="" />
         </button>
-        <button className='play-btn' onClick={() => setIsPlaying(!isPlaying)}>
+        <button className="play-btn" onClick={() => setIsPlaying(!isPlaying)}>
           {isPlaying ? (
-            <img src='/assets/icons/pause.svg' alt='' />
+            <img src="/assets/icons/pause.svg" alt="" />
           ) : (
-            <img src='/assets/icons/play.svg' alt='' />
+            <img src="/assets/icons/play.svg" alt="" />
           )}
         </button>
-        <button className='skip-btn' onClick={() => SkipSong()}>
-          <img src='/assets/icons/next.svg' alt='' />
+        <button className="skip-btn" onClick={() => SkipSong()}>
+          <img src="/assets/icons/next.svg" alt="" />
         </button>
       </div>
     </div>
